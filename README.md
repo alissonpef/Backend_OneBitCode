@@ -1,4 +1,4 @@
-# Bem-vindo(a) ao meu Perfil! 👋
+# Bem-vindo(a) ao meu Repositório! 👋
 
 Olá! Meu nome é **Alisson** e sou um entusiasta de tecnologia e desenvolvedor em formação. Este espaço é dedicado a documentar minha jornada de aprendizado, especialmente através do curso **Full Stack JavaScript** da **OneBitCode**.
 
@@ -78,9 +78,7 @@ Tecnologias que estou aprendendo e utilizando ao longo do curso:
 
 ---
 
-## 📫 **Contato**
+## 📫 Como me encontrar:
 
-Dúvidas ou sugestões? Entre em contato:
-
-- **OneBitCode:** [Site Oficial](https://onebitcode.com).
-- **Autor do Repositório:** [Alisson](mailto:alissonpef@gmail.com).
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alisson-pereira-ferreira-45022623b/)
+- [![Gmail](https://img.shields.io/badge/Gmail-%23EA4335.svg?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alissonpef@gmail.com)
