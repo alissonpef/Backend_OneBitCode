@@ -61,3 +61,29 @@ Implementar qualidade de software é que nem andar de bicicleta: você não apre
 - Cada teste deve ter seu próprio propósito.
 - Não se deve escrever mais códigos de produção do que o necessário para aplicar o teste de falha atual.
 - F.I.R.S.T. (Fast(Rapidez), Independent(Independente), Repeatable(Repetível), Self-Validating(Autovalidável), Timely(Pontualidade)).
+
+## Capitulo 10 - Classes
+
+- Classes devem ser pequenas e ter um único propósito.
+- O nome da classe deve refletir o seu propósito.
+
+## Capitulo 11 - Sistemas
+
+- "Complexidade mata. Ela suga a vida dos desenvolvedores, dificulta o planejamento, a construção e o teste dos produtos" - Ray Ozzie
+- Separe a construção e o uso do sistema.
+- Simplicidade é a chave para um sistema limpo.
+
+## Capitulo 12 - Emergiência
+
+- Um projeto é "simples", se seguir as seguintes regras:
+    - Efetuar todos os testes;
+    - Sem duplicação de código;
+    - Expressar o propósito do programador;
+    - Minimizar o número de classes e métodos;
+
+## Capitulo 13 - Conclusão
+
+- Simplicidade e Eficiência.
+- Manter os elementos mais curtos e descritivos.
+- Cuidados na utilização de comentários.	
+- Preocure-se com o bom funcionamento, legibilidade e manutenção do código.
