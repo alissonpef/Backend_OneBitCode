@@ -26,7 +26,7 @@ section {
     height: 10px;
 }
 
-/* root element -> 16px (tam da fonte padrão) * 3 = 48px */
+/* root element -> 16px (tam da fonte padrão) * 3= 48px */
 .rem {
     height: 3rem;
 }
