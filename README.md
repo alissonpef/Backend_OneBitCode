@@ -8,7 +8,7 @@ Aqui, você vai encontrar minhas anotações, os códigos dos exercícios e os p
 
 ## 📚 Minha Jornada no Backend com JavaScript (OneBitCode)
 
-Este repositório foca no aprendizado do módulo de **Backend** do curso **Full Stack JavaScript** da [OneBitCode](https://onebitcode.com/). Meu objetivo aqui é construir uma base sólida nos seguintes pilares:
+Este repositório foca no aprendizado do módulo de **Backend** do curso. Meu objetivo aqui é construir uma base sólida nos seguintes pilares:
 
 -   🟢 **Introdução ao NodeJS:**
     Entendendo o Node.js desde o início, seu event loop, como trabalhar com módulos nativos (como `fs` e `path`) e executar JavaScript diretamente no servidor, preparando o terreno para aplicações robustas.
