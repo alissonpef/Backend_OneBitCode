@@ -1,6 +1,6 @@
 # Bem-vindo(a) ao meu Repositório! 👋
 
-Olá! Meu nome é **Alisson** e sou um entusiasta de tecnologia e desenvolvedor em formação. Este espaço é dedicado a documentar minha jornada de aprendizado, especialmente através do curso **Full Stack JavaScript** da **OneBitCode**.
+Meu nome é **Alisson** e sou um entusiasta de tecnologia e desenvolvedor em formação. Este espaço é dedicado a documentar minha jornada de aprendizado, especialmente através do curso **Full Stack JavaScript** da **OneBitCode**.
 
 ---
 
