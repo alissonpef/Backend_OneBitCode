@@ -13,6 +13,3 @@ console.log(absolutePath)
 
 const fileName = path.basename(relativePath)
 console.log(fileName)
-
-const ext = path.extname(absolutePath)
-console.log(ext)
