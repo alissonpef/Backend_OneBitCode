@@ -20,8 +20,6 @@ rl.question("Qual é o seu nome? ", (answer) => {
 
 rl.on("close", () => {
   rl.write("Saindo...")
-  // repare que ao adicionar um listener para "close" precisaremos
-	// encerrar o processo atual manualmente ou ele ficará "pendurado"
 	process.exit(0)
 })
 
