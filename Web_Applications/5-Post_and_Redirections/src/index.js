@@ -32,7 +32,7 @@ app.post("/register", (req, res) => {
 
   res.redirect("/usuarios");
 });
-
+  
 app.get("/usuarios", (req, res) => {
   res.render("users", { users: storedUsers });
 });
