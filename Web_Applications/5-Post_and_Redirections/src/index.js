@@ -29,10 +29,10 @@ app.post("/register", (req, res) => {
 
   storedUsers.push({ username, password });
   console.log(req.body);
-
+  
   res.redirect("/usuarios");
 });
-  
+
 app.get("/usuarios", (req, res) => {
   res.render("users", { users: storedUsers });
 });
