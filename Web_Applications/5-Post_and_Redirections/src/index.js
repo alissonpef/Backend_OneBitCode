@@ -26,7 +26,7 @@ app.get("/formulario", (req, res) => {
 app.post("/register", (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
-
+  
   storedUsers.push({ username, password });
   console.log(req.body);
   
