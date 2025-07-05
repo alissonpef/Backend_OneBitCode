@@ -4,7 +4,7 @@ const { title } = require("node:process");
 
 const app = express();
 const storedUsers = [];
-
+  
 // Configuração do EJS
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
