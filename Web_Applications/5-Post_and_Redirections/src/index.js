@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 app.get("/formulario", (req, res) => {
   res.render("forms");
 });
-
+  
 app.post("/register", (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
