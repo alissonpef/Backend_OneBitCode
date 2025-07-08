@@ -36,6 +36,6 @@ app.post("/register", (req, res) => {
 app.get("/usuarios", (req, res) => {
   res.render("users", { users: storedUsers });
 });
-
+  
 const PORT = 3000;
 app.listen(PORT, () => console.log("Servidor iniciado!"));
