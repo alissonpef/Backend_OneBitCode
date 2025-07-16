@@ -50,7 +50,7 @@ app.post("/emails/delete", (req, res) => {
   emails = emails.filter((item) => item !== email);
   res.redirect("/emails");
 });
-
+  
 // Inicialização do servidor
 const PORT = 3000;
 app.listen(PORT, () => console.log("Servidor iniciado!"));
