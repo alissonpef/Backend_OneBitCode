@@ -16,7 +16,7 @@ const server = http.createServer((request, response) => {
       response.writeHead(404);
       response.write("Caminho não encontrado!");
   }
-  
+
   response.end();
 });
 
