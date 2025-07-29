@@ -10,13 +10,14 @@ export const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
   if (err instanceof ZodError) {
     return res.status(400).json({
       message: "Validation error",
-      errors: err.errors
+      issues: err.issues 
     });
   }
 
   if (err instanceof Error) {
-    return res.status(500).json({ message: err.message });
+    console.error(err);
+    return res.status(500).json({ message: "Internal Server Error" });
   }
 
-  return res.status(500).json({ message: "internal server error" });
-}
+  return res.status(500).json({ message: "An unexpected error occurred" });
+};
