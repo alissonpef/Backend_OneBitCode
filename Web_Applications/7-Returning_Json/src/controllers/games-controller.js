@@ -38,57 +38,95 @@ module.exports = {
 
   // POST /games
   save: (req, res) => {
-    const { name, genres, year } = req.body
+    const { name, genres, year } = req.body;
 
     const newGame = {
       id: Math.floor(Math.random() * 999999),
       name,
       genres,
-      year
-    }
+      year,
+    };
 
-    games.push(newGame)
+    games.push(newGame);
 
-    res.status(201)
-    res.json(newGame)
+    res.status(201);
+    res.json(newGame);
   },
 
   // POST /games/:id/genres
   addGenre: (req, res) => {
-    const { id } = req.params
-    const { genre } = req.body
+    const { id } = req.params;
+    const { genre } = req.body;
 
-    const gameIndex = games.findIndex(game => game.id === +id)
+    const gameIndex = games.findIndex((game) => game.id === +id);
 
     if (gameIndex === -1) {
-      return res.status(404).json({ message: 'Game not found!' })
+      return res.status(404).json({ message: "Game not found!" });
     }
 
-    if (typeof genre !== 'string' || games[gameIndex].genres.includes(genre)) {
-      return res.status(400).json({ message: 'Invalid genre!' })
+    if (typeof genre !== "string" || games[gameIndex].genres.includes(genre)) {
+      return res.status(400).json({ message: "Invalid genre!" });
     }
 
-    games[gameIndex].genres.push(genre)
+    games[gameIndex].genres.push(genre);
 
-    res.json(games[gameIndex])
+    res.json(games[gameIndex]);
   },
 
   // PUT /games/:id
   update: (req, res) => {
-    const { id } = req.params
-    const { name, year } = req.body
+    const { id } = req.params;
+    const { name, year } = req.body;
 
-    const gameIndex = games.findIndex(game => game.id === +id)
+    const gameIndex = games.findIndex((game) => game.id === +id);
 
     if (gameIndex === -1) {
-      return res.status(404).json({ message: "Game not found!" })
+      return res.status(404).json({ message: "Game not found!" });
     }
 
-    games[gameIndex].name = name
-    games[gameIndex].year = year
+    games[gameIndex].name = name;
+    games[gameIndex].year = year;
 
-    res.json(games[gameIndex])
+    res.json(games[gameIndex]);
   },
 
   // DELETE /games/:id
+  delete: (req, res) => {
+    const { id } = req.params;
+
+    const gameIndex = games.findIndex((game) => game.id === +id);
+
+    if (gameIndex === -1) {
+      return res.status(404).json({ message: "Game not found!" });
+    }
+
+    games.splice(gameIndex, 1);
+
+    res.status(204).end();
+  },
+
+  // DELETE /games/:id/genres/:name
+  removeGenre: (req, res) => {
+    const { id, name } = req.params;
+
+    const gameIndex = games.findIndex((game) => game.id === +id);
+
+    if (gameIndex === -1) {
+      return res.status(404).json({ message: "Game not found!" });
+    }
+
+    if (
+      !name ||
+      typeof name !== "string" ||
+      !games[gameIndex].genres.includes(name)
+    ) {
+      return res.status(400).json({ message: "Invalid genre!" });
+    }
+
+    games[gameIndex].genres = games[gameIndex].genres.filter(
+      (genre) => genre !== name
+    );
+
+    res.status(204).end();
+  },
 };
