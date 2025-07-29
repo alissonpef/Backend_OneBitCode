@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Dashboard, <%= user.username %>!</h1>
+    <p>Seu papel é: <%= user.role %></p>
+
+    <% if (user.role === 'admin') { %>
+        <p><a href="/dashboard/users">Ver lista de usuários (Admin)</a></p>
+    <% } %>
+    
+    <a href="/auth/logout">Sair</a>
+</body>
+</html>

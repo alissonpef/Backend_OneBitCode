@@ -1,59 +1,47 @@
-let users = [
-  { username: 'Isaac', password: '123' },
-  { username: 'John', password: '456' }
-];
+const bcrypt = require('bcrypt')
+const users = require('../models/users')
 
 module.exports = {
   index: (req, res) => {
     if (req.session.authenticated) {
-      return res.redirect('/dashboard');
+      return res.redirect('/dashboard')
     }
-    res.render('index');
+    res.render('index')
   },
 
-  register: (req, res) => {
-    const { username, password } = req.body;
-
-    const userAlreadyExists = users.find(user => user.username === username);
-    if (userAlreadyExists) {
-      console.log('Tentativa de registrar usuário que já existe:', username);
-      return res.redirect('/');
+  register: async (req, res) => {
+    const { username, password, role } = req.body
+    if (!username || !password || !role) {
+      return res.status(400).send('Todos os campos são obrigatórios.')
     }
 
-    const newUser = { username, password };
-    users.push(newUser);
+    const salt = await bcrypt.genSalt(10)
+    const passwordHash = await bcrypt.hash(password, salt)
 
-    req.session.authenticated = true;
-    req.session.currentUser = newUser;
-
-    console.log('Novo usuário registrado e logado:', newUser);
-    res.redirect('/dashboard');
+    users.push({ username, passwordHash, role })
+    res.redirect('/')
   },
 
-  login: (req, res) => {
-    const { username, password } = req.body;
-    const user = users.find(user => user.username === username);
+  login: async (req, res) => {
+    const { username, password } = req.body
+    const user = users.find(u => u.username === username)
 
-    if (!user || user.password !== password) {
-      console.log('Falha no login para o usuário:', username);
-      return res.redirect('/');
+    if (user && await bcrypt.compare(password, user.passwordHash)) {
+      req.session.authenticated = true
+      req.session.currentUser = { username: user.username, role: user.role }
+      res.redirect('/dashboard')
+    } else {
+      res.status(401).send('Usuário ou senha inválidos.')
     }
-
-    req.session.authenticated = true;
-    req.session.currentUser = user;
-
-    console.log('Usuário logado com sucesso:', user);
-    res.redirect('/dashboard');
   },
 
   logout: (req, res) => {
     req.session.destroy(err => {
       if (err) {
-        console.log("Erro ao fazer logout:", err);
-        return res.redirect('/dashboard');
+        return res.redirect('/dashboard')
       }
-      res.clearCookie('connect.sid');
-      res.redirect('/');
-    });
+      res.clearCookie('connect.sid')
+      res.redirect('/')
+    })
   }
-};
+}
