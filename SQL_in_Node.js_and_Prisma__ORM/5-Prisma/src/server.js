@@ -7,3 +7,4 @@ app.use(express.json())
 app.use("/api/users", usersRouter)
 
 app.listen(3000, () => console.log(`Servidor inciado!`))
+    
