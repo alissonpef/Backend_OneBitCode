@@ -1,31 +1,36 @@
-# Bem-vindo(a) ao meu Repositório! 👋
+# Meus Projetos de Backend com Node.js
 
-Olá! Meu nome é **Alisson** e sou um desenvolvedor Backend em formação. Este repositório documenta meu aprendizado e progresso nos estudos do curso **Full Stack JavaScript** da [OneBitCode](https://onebitcode.com/).
+Olá! Meu nome é **Alisson** e sou um desenvolvedor Backend em formação. Este repositório documenta meu aprendizado e progresso nos estudos de **Backend com Node.js** no curso Full Stack da [OneBitCode](https://onebitcode.com/).
 
-Aqui, você vai encontrar minhas anotações, os códigos dos exercícios e os projetos backend que estou construindo. Sinta-se à vontade para explorar e acompanhar minha evolução no lado do servidor! 🚀
+Aqui, você vai encontrar os códigos dos exercícios e os projetos que construí, cobrindo desde os fundamentos do Node.js até a criação de APIs complexas com bancos de dados, autenticação e muito mais. Sinta-se à vontade para explorar e acompanhar minha evolução! 🚀
 
 ---
 
-## 📚 Minha Jornada no Backend com JavaScript (OneBitCode)
+## 📚 Módulos e Projetos Desenvolvidos
 
-Este repositório foca no aprendizado do módulo de **Backend** do curso. Meu objetivo aqui é construir uma base sólida nos seguintes pilares:
+Este repositório está organizado de acordo com os módulos do curso, demonstrando uma evolução clara das minhas habilidades:
 
--   🟢 **Introdução ao NodeJS:**
-    Entendendo o Node.js desde o início, seu event loop, como trabalhar com módulos nativos (como `fs` e `path`) e executar JavaScript diretamente no servidor, preparando o terreno para aplicações robustas.
--   🛠️ **Aplicações Web com NodeJS:**
-    Aprofundando no desenvolvimento de aplicações web completas com Node.js, utilizando frameworks como Express, entendendo a arquitetura MVC, criando APIs REST, gerenciando rotas e implementando autenticação.
--   🐘 **Banco de Dados SQL:**
-    Dominando a integração de bancos de dados SQL (como PostgreSQL) em aplicações Node.js, utilizando ORMs e explorando as melhores práticas para gerenciar dados relacionais de forma eficiente.
--   💠 **SQL no Node.js e Prisma ORM:**
-    Elevando o nível na interação com bancos de dados SQL no Node.js através do Prisma ORM, aprendendo sobre sua abordagem moderna para modelagem de dados, migrações e consultas type-safe.
--   🍃 **MongoDB:**
-    Explorando o banco de dados NoSQL MongoDB, para entender seus conceitos fundamentais, a modelagem de documentos e como ele pode ser utilizado em aplicações Node.js.
+- 🟢 **Fundamentos do NodeJS:**
+  Exploração do ambiente Node.js, incluindo o event loop, o sistema de módulos (`CJS` e `ESM`), e a manipulação de arquivos com os módulos `fs` e `path`.
+
+- 🛠️ **Aplicações Web com Express.js:**
+  Criação de servidores web do zero, aprendendo a gerenciar rotas, servir arquivos estáticos e dinâmicos (com `EJS`), implementar a arquitetura `MVC`, construir APIs RESTful e lidar com uploads de arquivos (`Multer`).
+
+- 🐘 **Bancos de Dados com SQL e Sequelize:**
+  Integração de aplicações Node.js com o banco de dados `PostgreSQL` utilizando o ORM `Sequelize`. Foco em modelagem de dados, CRUD completo e gerenciamento de relacionamentos (One-to-One, One-to-Many, Many-to-Many).
+
+- 💠 **ORM Moderno com Prisma:**
+  Abordagem moderna para interação com bancos de dados, utilizando o `Prisma` para criar migrations, modelar o schema e realizar consultas type-safe em uma API.
+
+- 🔐 **Autenticação e Segurança:**
+  Implementação de sistemas de autenticação completos, incluindo gerenciamento de sessões (`express-session`), criptografia de senhas com `bcrypt` e autenticação baseada em tokens com `JWT` (JSON Web Tokens) para proteger rotas.
+
+- ✨ **Bônus: Evoluindo para TypeScript:**
+  Refatoração de uma API para `TypeScript`, aplicando tipagem estática para criar um código mais robusto, escalável e com melhor tratamento de erros.
 
 ---
 
 ## 🛠️ Tecnologias e Ferramentas
-
-Tecnologias que estou aprendendo e utilizando ao longo do curso:
 
 **Linguagens e Runtimes:**
 
@@ -36,20 +41,24 @@ Tecnologias que estou aprendendo e utilizando ao longo do curso:
 **Frameworks e Bibliotecas Backend:**
 
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-
-**Banco de Dados & ORMs/ODMs:**
-
-![SQL](https://img.shields.io/badge/SQL-%234479A1.svg?style=for-the-badge&logo=sqlite&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234EA94B.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=sequelize&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=prisma&logoColor=white)
+
+**Banco de Dados:**
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+
+**Autenticação:**
+
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+![Bcrypt](https://img.shields.io/badge/Bcrypt-6245C4?style=for-the-badge)
 
 **Ferramentas Gerais:**
 
 ![Git](https://img.shields.io/badge/GIT-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-%23181717.svg?style=for-the-badge&logo=github&logoColor=white)
-![VSCode](https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+![Dotenv](https://img.shields.io/badge/Dotenv-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black)
 
 ---
 
